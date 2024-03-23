@@ -8,7 +8,7 @@ export default function Header(props) {
     <header className="block row center">
       <div>
         <Link to="/">
-          <h1>Shopping Cart</h1>
+          <h1>Welcome to the Product Browsing App!</h1>
         </Link>
       </div>
       <div>

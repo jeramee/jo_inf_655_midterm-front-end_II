@@ -1,14 +1,12 @@
-// App.js
-
 import React, { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Removed Routes import as it's not used
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
-import Product from './components/Product'; // Changed from Main to Product
+import Product from './components/Product'; 
 import Cart from './components/Cart';
+import SignIn from './components/SignIn'; // Import your SignIn component
 import { CheeseGrater1, CheeseGrater2, CoffeeCup1, CoffeeCup2, Fan1, Fan2 } from './images/ImageImports';
 
 function App() {
-  // Define products with image imports
   const products = [
     { id: 1, name: 'Cheese Grater 1', image: CheeseGrater1, price: 10 },
     { id: 2, name: 'Cheese Grater 2', image: CheeseGrater2, price: 20 },
@@ -50,9 +48,19 @@ function App() {
     <Router>
       <div className="App">
         <Header countCartItems={cartItems.length}></Header>
-        <div className="row">
-          <Product products={products} onAdd={onAdd}></Product> {/* Changed from Main to Product */}
-          <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
+        <Routes>
+          <Route path="/" element={<h1>Welcome to the Product Browsing App!</h1>} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
+        </Routes>
+        <h2>Products</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          {products.map((product) => (
+            <div key={product.id} style={{ margin: '10px' }}>
+              <Product product={product} />
+              <button onClick={() => onAdd(product)}>Add</button>
+            </div>
+          ))}
         </div>
       </div>
     </Router>
@@ -60,3 +68,4 @@ function App() {
 }
 
 export default App;
+
