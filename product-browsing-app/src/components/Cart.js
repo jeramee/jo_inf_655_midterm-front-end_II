@@ -1,3 +1,5 @@
+// /components/Cart.js
+
 import React, { useState } from 'react';
 
 const Cart = () => {
@@ -11,7 +13,7 @@ const Cart = () => {
         <div className="cart">
             <h2>Shopping Cart</h2>
             {cartItems.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p>Cart is empty.</p>
             ) : (
                 <ul>
                     {cartItems.map(item => (
