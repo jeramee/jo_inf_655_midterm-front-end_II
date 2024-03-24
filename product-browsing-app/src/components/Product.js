@@ -23,9 +23,17 @@ const Product = ({ product, onAdd, onRemove, countInCart }) => {
       <div className="product-info">
         <h3>{name}</h3>
         <p>${price}</p>
-        <button onClick={() => onAdd(product)}>Add to Cart</button>
-        <button onClick={handleRemove}>Remove from Cart</button>
-        <span>Quantity in Cart: {countInCart}</span>
+        <div className="add-to-cart">
+          <button onClick={() => onAdd(product)}>Add to Cart</button>
+        </div>
+        <div className="remove-from-cart">
+          <button onClick={handleRemove}>Remove from Cart</button>
+        </div>
+        <div className="quantity--cart">
+          <span>Quantity in Cart: {countInCart}</span>
+        </div>  
+      </div>
+      <div className="space-after-product">
       </div>
     </div>
   );

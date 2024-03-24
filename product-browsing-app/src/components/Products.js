@@ -1,3 +1,5 @@
+// /src/components/Products.js
+
 import React from 'react';
 
 const Products = ({ products }) => {

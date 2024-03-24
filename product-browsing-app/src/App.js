@@ -1,10 +1,11 @@
 // App.js
 
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Updated import statement
 import Header from './components/Header';
 import Cart from './components/Cart';
 import SignIn from './components/SignIn';
+import SignUp from './components/SignUp'; // Corrected import path// Corrected import path
 import Carousel from './components/Carousel';
 import { CheeseGrater1, CheeseGrater2, CoffeeCup1, CoffeeCup2, Fan1, Fan2 } from './images/ImageImports';
 import './App.css';
@@ -43,6 +44,7 @@ function App() {
       <div className="App">
         <Header countCartItems={cartItems.length} />
         <Routes>
+          <Route path="/signup" element={<SignUp />} /> {/* Updated Route component */}
           <Route path="/signin" element={<SignIn />} />
           <Route
             path="/cart"

@@ -1,16 +1,26 @@
-// /components/ProductDetail.js
+import React, { useContext } from 'react';
+import ProductContext from '../context/ProductContext';
 
-import React from 'react';
+const ProductDetail = ({ productId }) => {
+  const { products } = useContext(ProductContext);
 
-const ProductDetail = ({ product }) => {
-    return (
-        <div>
-            {/* Render product details */}
-            <h1>{product.name}</h1>
-            <p>Price: ${product.price}</p>
-            {/* Add more details as needed */}
-        </div>
-    );
+  // Find the selected product based on productId
+  const selectedProduct = products.find(product => product.id === productId);
+
+  // Render product details or a message if the product is not found
+  return (
+    <div>
+      {selectedProduct ? (
+        <>
+          <h1>{selectedProduct.title}</h1>
+          <p>{selectedProduct.description}</p>
+          {/* Add more details as needed */}
+        </>
+      ) : (
+        <p>Product not found.</p>
+      )}
+    </div>
+  );
 };
 
 export default ProductDetail;

@@ -1,9 +1,13 @@
-// /pages/SearchPage.js
-
-import React, { useEffect } from 'react';
-import Search from '../components/Search';
+import React, { useContext, useState, useEffect } from 'react';
+import SearchTask from '../components/Search';
+import { ProductContext } from '../../context/ProductContext'; // Adjusted import path
 
 const SearchPage = () => {
+  const { products } = useContext(ProductContext);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Implement search logic here
+
   useEffect(() => {
     console.log("SearchPage rendered");
   }, []);
@@ -11,7 +15,8 @@ const SearchPage = () => {
   return (
     <div>
       <h1>Search Page</h1>
-      <Search />
+      <SearchTask search={searchTerm} setSearch={setSearchTerm} />
+      {/* Display search results here */}
     </div>
   );
 };

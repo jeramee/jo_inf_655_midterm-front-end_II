@@ -1,5 +1,3 @@
-/* Header.css */
-
 .block {
     display: block;
   }
@@ -8,31 +6,25 @@
     text-align: center;
   }
   
-  .logo-container {
-    margin-bottom: 20px; /* Add space below the logo */
-  }
-  
-  .logo {
-    text-decoration: none;
-    color: black;
+  .logo-img {
+    height: 40px;
+    margin-right: 10px;
   }
   
   .nav-links {
     display: flex;
-    justify-content: center; /* Center the flex items horizontally */
-  }
-  
-  .nav-left {
-    margin-right: auto; /* Push Home link to the left */
-  }
-  
-  .nav-right {
-    margin-left: auto; /* Push Cart and Sign In links to the right */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align the links vertically */
   }
   
   .nav-link {
     text-decoration: none;
-    color: blue; /* Make the links blue */
-    margin: 0 10px; /* Add margin between links */
+    color: blue;
+    margin-right: 70px; /* Increase the margin to space the links better */
+    margin-bottom: 50px;
+  }
+  
+  .welcome-buffer {
+    margin-bottom: 20px;
   }
   

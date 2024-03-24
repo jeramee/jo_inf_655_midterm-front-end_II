@@ -2,7 +2,7 @@
 
 import { Button, Navbar, Modal } from 'react-bootstrap';
 import { useState, useContext } from 'react';
-import { CartContext } from "../context/CartContext"; // Update the path
+import { CartContext } from "./context/CartContext"; // Update the path
 import CartProduct from './CartProduct'; // Update the path
 
 
