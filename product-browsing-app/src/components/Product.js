@@ -15,7 +15,7 @@ const Product = ({ product, onAdd, onRemove, countInCart }) => {
 
   return (
     <div className="product">
-      <h1>Product Page</h1>
+      <h1>Product</h1>
       <div className="image-container">
         <img src={image} alt={name} className="product-img" />
       </div>

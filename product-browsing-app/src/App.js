@@ -50,7 +50,6 @@ function App() {
             element={<Cart cartItems={cartItems} onRemove={onRemove} />}
           />
         </Routes>
-        <h2>Products</h2>
         <Carousel
           products={products}
           cartItems={cartItems}
