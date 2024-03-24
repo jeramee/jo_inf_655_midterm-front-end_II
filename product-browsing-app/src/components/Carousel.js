@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { CheeseGrater1, CheeseGrater2, CoffeeCup1, CoffeeCup2, Fan1, Fan2 } from '../images/ImageImports';
 import Product from './Product';
 
 const Carousel = ({ products, cartItems, onAdd, onRemove }) => {

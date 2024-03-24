@@ -1,0 +1,38 @@
+/* Header.css */
+
+.block {
+    display: block;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .logo-container {
+    margin-bottom: 20px; /* Add space below the logo */
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center; /* Center the flex items horizontally */
+  }
+  
+  .nav-left {
+    margin-right: auto; /* Push Home link to the left */
+  }
+  
+  .nav-right {
+    margin-left: auto; /* Push Cart and Sign In links to the right */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: blue; /* Make the links blue */
+    margin: 0 10px; /* Add margin between links */
+  }
+  

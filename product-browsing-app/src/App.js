@@ -43,7 +43,6 @@ function App() {
       <div className="App">
         <Header countCartItems={cartItems.length} />
         <Routes>
-          <Route path="/" element={<h1>Welcome to the Product Browsing App!</h1>} />
           <Route path="/signin" element={<SignIn />} />
           <Route
             path="/cart"

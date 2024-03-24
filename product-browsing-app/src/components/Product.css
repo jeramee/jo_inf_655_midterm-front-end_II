@@ -21,7 +21,8 @@
 }
 
 .product-info {
-    margin-top: 20px; /* Add margin at the top of the product info */
+    padding: 20px; /* Adjust the padding value as needed */
+    /* margin-top: 20px; Add margin at the top of the product info */
     width: 100%; /* Ensure product info takes up full width */
 }
 
