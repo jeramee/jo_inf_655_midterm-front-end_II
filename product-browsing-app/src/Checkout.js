@@ -10,8 +10,8 @@ const Checkout = () => {
         // Clear the cart upon successful submission
         dispatch({ type: 'CLEAR_CART' });
         // Redirect the user to the Thank You page
-        // You can use React Router for navigation
-        // For example: history.push('/thankyou');
+        // Use React Router for navigation
+        // For example: history.push('/thank you');
     };
 
     return (

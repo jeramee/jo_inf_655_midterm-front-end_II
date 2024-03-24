@@ -1,7 +1,10 @@
+// /components/NavbarComponent.js
+
 import { Button, Navbar, Modal } from 'react-bootstrap';
 import { useState, useContext } from 'react';
-import { CartContext } from "./context/CartContext";
-import CartProduct from './components/CartProduct';
+import { CartContext } from "../context/CartContext"; // Update the path
+import CartProduct from './CartProduct'; // Update the path
+
 
 function NavbarComponent() {
     const cart = useContext(CartContext);
@@ -44,7 +47,7 @@ function NavbarComponent() {
                 <Modal.Body>
                     {productsCount > 0 ?
                         <>
-                            <p>Items in your cart:</p>
+                            <p>Items in cart:</p>
                             {cart.items.map((currentProduct, idx) => (
                                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                             ))}

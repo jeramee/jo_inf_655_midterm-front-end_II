@@ -1,0 +1,31 @@
+/* Product.css */
+
+.product {
+    display: flex; /* Use flexbox for flexible layout */
+    flex-direction: column; /* Arrange child elements vertically */
+    align-items: center; /* Center align child elements horizontally */
+    text-align: center; /* Center align text */
+    height: 100%; /* Set the height of the product container to 100% */
+}
+
+.image-container {
+    max-width: 500px; /* Maximum width for the image container */
+    padding: 20px; /* Add padding around the image container */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    object-fit: contain; /* Maintain aspect ratio while fitting the image within the container */
+}
+
+.product-info {
+    margin-top: 20px; /* Add margin at the top of the product info */
+    width: 100%; /* Ensure product info takes up full width */
+}
+
+.buffer-area {
+    flex-grow: 1; /* Allow the buffer area to grow and take up remaining space */
+    height: 100%; /* Set the height of the buffer area to 100% */
+}

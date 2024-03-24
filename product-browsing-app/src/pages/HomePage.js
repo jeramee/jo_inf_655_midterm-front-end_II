@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import Product from '../components/Product'; // Assuming Product component is in the components directory
 
 const HomePage = () => {
-    // Assuming you have a state to store the product
+    // State to store the product
     const [product, setProduct] = useState(null);
 
-    // Assuming you have a function to fetch the product data
+    // Function to fetch the product data
     const fetchProduct = () => {
-        // Example fetch function, replace with your actual data fetching logic
+        // Example fetch function, replace actual data fetching logic
         const productData = {
             id: 1,
             name: 'Cheese Grater 1',
