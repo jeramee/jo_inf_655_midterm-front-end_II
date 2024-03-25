@@ -13,7 +13,6 @@ export default function Header(props) {
           <img src="/assets/img/cafe.jpg" alt="Cafe Logo" className="logo-img" />
         </Link>
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="/product" className="nav-link">Product Detail</Link>
         <Link to="/search" className="nav-link">Search</Link>
         <Link to="/cart" className="nav-link">Cart</Link>
         <Link to="/signin" className="nav-link">Sign In</Link>

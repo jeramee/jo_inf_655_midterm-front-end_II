@@ -29,7 +29,7 @@ const Product = ({ product, onAdd, onRemove, countInCart }) => {
           <button onClick={() => onAdd(product)}>Add to Cart</button>
         </div>
         <div className="remove-from-cart">
-          <button onClick={handleRemove}>Remove from Cart</button>
+          <button className="remove-button" onClick={handleRemove}>Remove from Cart</button>
         </div>
         <div className="quantity--cart">
           <span>Quantity in Cart: {countInCart}</span>
@@ -42,3 +42,5 @@ const Product = ({ product, onAdd, onRemove, countInCart }) => {
 };
 
 export default Product;
+
+

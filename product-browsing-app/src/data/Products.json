@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Cheese Grater 1",
+    "image": "CheeseGrater1",
+    "price": 10,
+    "description": "This is Cheese Grater 1."
+  },
+  {
+    "id": 2,
+    "name": "Cheese Grater 2",
+    "image": "CheeseGrater2",
+    "price": 20,
+    "description": "This is Cheese Grater 2."
+  },
+  {
+    "id": 3,
+    "name": "Coffee Cup 1",
+    "image": "CoffeeCup1",
+    "price": 15,
+    "description": "This is Coffee Cup 1."
+  },
+  {
+    "id": 4,
+    "name": "Coffee Cup 2",
+    "image": "CoffeeCup2",
+    "price": 25,
+    "description": "This is Coffee Cup 2."
+  },
+  {
+    "id": 5,
+    "name": "Fan 1",
+    "image": "Fan1",
+    "price": 30,
+    "description": "This is Fan 1."
+  },
+  {
+    "id": 6,
+    "name": "Fan 2",
+    "image": "Fan2",
+    "price": 35,
+    "description": "This is Fan 2."
+  }
+]

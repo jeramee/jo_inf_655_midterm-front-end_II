@@ -39,6 +39,32 @@
   }
 }
 
+/* Add this CSS rule to change the color of buttons to blue */
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add a hover effect to the buttons */
+button:hover {
+  background-color: darkblue;
+}
+
+/* Specific class for the remove button */
+.remove-button {
+  background-color: red;
+}
+
+/* Hover effect for the remove button */
+.remove-button:hover {
+  background-color: darkred;
+}
+
 /* Additional styles for the carousel and products */
 .carousel-container {
   padding: 0 20px; /* Add padding to the left and right sides of the carousel */
@@ -58,4 +84,16 @@
 /* Add this CSS file */
 .product-info {
   margin-top: auto; /* Pushes the content to the bottom of the container */
+}
+
+.product-description-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.product-description-button:hover {
+  background-color: #0056b3;
 }

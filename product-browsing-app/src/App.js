@@ -8,20 +8,17 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp'; // Corrected import path// Corrected import path
 import Carousel from './components/Carousel';
 import { CheeseGrater1, CheeseGrater2, CoffeeCup1, CoffeeCup2, Fan1, Fan2 } from './images/ImageImports';
-import './App.css';
-
-const updateQuantity = (productId, newQuantity) => {
-  // Your logic to update the quantity
-};
+import '../src/App.css'; // Import the App.css file
+import SearchPage from './pages/SearchPage'; // Import the SearchPage component
 
 function App() {
   const products = [
-    { id: 1, name: 'Cheese Grater 1', image: CheeseGrater1, price: 10 },
-    { id: 2, name: 'Cheese Grater 2', image: CheeseGrater2, price: 20 },
-    { id: 3, name: 'Coffee Cup 1', image: CoffeeCup1, price: 15 },
-    { id: 4, name: 'Coffee Cup 2', image: CoffeeCup2, price: 25 },
-    { id: 5, name: 'Fan 1', image: Fan1, price: 30 },
-    { id: 6, name: 'Fan 2', image: Fan2, price: 35 }
+    { id: 1, name: 'Cheese Grater 1', image: CheeseGrater1, price: 10, description: 'This is Cheese Grater 1.' },
+    { id: 2, name: 'Cheese Grater 2', image: CheeseGrater2, price: 20, description: 'This is Cheese Grater 2.' },
+    { id: 3, name: 'Coffee Cup 1', image: CoffeeCup1, price: 15, description: 'This is Coffee Cup 1.' },
+    { id: 4, name: 'Coffee Cup 2', image: CoffeeCup2, price: 25, description: 'This is Coffee Cup 2.' },
+    { id: 5, name: 'Fan 1', image: Fan1, price: 30, description: 'This is Fan 1.' },
+    { id: 6, name: 'Fan 2', image: Fan2, price: 35, description: 'This is Fan 2.' }
   ];
 
   const updateQuantity = (productId, newQuantity) => {
@@ -65,6 +62,7 @@ function App() {
             path="/cart"
             element={<Cart cartItems={cartItems} onRemove={onRemove} onUpdateQuantity={updateQuantity} />}
           />
+          <Route path="/search" element={<SearchPage products={products} onAdd={onAdd} />} />        
         </Routes>
         <Carousel
           products={products}

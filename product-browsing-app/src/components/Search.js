@@ -2,11 +2,20 @@
 
 import React from 'react';
 
-const Search = () => {
+const Search = ({ search, setSearch, handleSearch }) => {
+    const handleSearchChange = (e) => {
+        setSearch(e.target.value);
+    };
+
     return (
         <div>
-            <h1>Search Page</h1>
-            {/* Add search input and functionality here */}
+            <input
+                type="text"
+                value={search}
+                onChange={handleSearchChange}
+                placeholder="Search products..."
+            />
+            <button onClick={handleSearch}>Search</button>
         </div>
     );
 };
