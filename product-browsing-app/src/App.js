@@ -10,6 +10,10 @@ import Carousel from './components/Carousel';
 import { CheeseGrater1, CheeseGrater2, CoffeeCup1, CoffeeCup2, Fan1, Fan2 } from './images/ImageImports';
 import './App.css';
 
+const updateQuantity = (productId, newQuantity) => {
+  // Your logic to update the quantity
+};
+
 function App() {
   const products = [
     { id: 1, name: 'Cheese Grater 1', image: CheeseGrater1, price: 10 },
@@ -19,6 +23,17 @@ function App() {
     { id: 5, name: 'Fan 1', image: Fan1, price: 30 },
     { id: 6, name: 'Fan 2', image: Fan2, price: 35 }
   ];
+
+  const updateQuantity = (productId, newQuantity) => {
+    setCartItems(prevCartItems => {
+      return prevCartItems.map(item => {
+        if (item.id === productId) {
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      });
+    });
+  };
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -48,7 +63,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route
             path="/cart"
-            element={<Cart cartItems={cartItems} onRemove={onRemove} />}
+            element={<Cart cartItems={cartItems} onRemove={onRemove} onUpdateQuantity={updateQuantity} />}
           />
         </Routes>
         <Carousel

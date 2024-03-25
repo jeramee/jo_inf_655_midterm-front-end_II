@@ -1,3 +1,5 @@
+// /components/Product.js
+
 import React from 'react';
 import './Product.css'; // Import the CSS file for styling
 
