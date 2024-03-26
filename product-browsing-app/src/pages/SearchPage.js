@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Search from '../components/Search';
-import '../App.css'; // Importing CSS file for styling
+import { BrowserRouter as Route, Routes } from 'react-router-dom'; // Updated import statement
+import Carousel from '../components/Carousel';
+import '../App.css';
 
-const SearchPage = ({ products }) => {
+const SearchPage = ({ products, onAdd, onRemove }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [cartItems, setCartItems] = useState([]);
@@ -14,26 +16,8 @@ const SearchPage = ({ products }) => {
     setSearchResults(filteredProducts);
   };
 
-  const onAdd = (product) => {
-    console.log('Adding product to cart:', product);
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      console.log('Product already exists in cart. Updating quantity...');
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, quantity: exist.quantity + 1 } : x
-        )
-      );
-    } else {
-      console.log('Product does not exist in cart. Adding new item...');
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
-  };
-
   const handleAddToCart = (productId) => {
-    console.log('Adding product to cart with ID:', productId);
     const productToAdd = products.find(product => product.id === productId);
-    console.log('Product to add:', productToAdd);
     if (productToAdd) {
       const exist = cartItems.find((x) => x.id === productId);
       if (exist) {
@@ -43,16 +27,11 @@ const SearchPage = ({ products }) => {
           )
         );
       } else {
-        // Update cartItems with functional form of setCartItems
-        setCartItems(prevCartItems => [...prevCartItems, { ...productToAdd, quantity: 1 }]);
+        setCartItems([...cartItems, { ...productToAdd, quantity: 1 }]);
       }
-  
-      // Log the state of cartItems after it's been updated
-      console.log('Cart items after updating:', cartItems);
     }
   };
 
-  // Derive quantity in cart for a specific product from cartItems state
   const getQuantityInCart = (productId) => {
     const productInCart = cartItems.find((item) => item.id === productId);
     return productInCart ? productInCart.quantity : 0;
@@ -84,6 +63,17 @@ const SearchPage = ({ products }) => {
           ))}
         </ul>
       </div>
+      <Route>
+        <div className="App">
+          {/* Pass searchResults to the Carousel component */}
+          <Carousel
+            products={searchResults}
+            cartItems={cartItems}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          />
+        </div>
+      </Route>
     </div>
   );
 };

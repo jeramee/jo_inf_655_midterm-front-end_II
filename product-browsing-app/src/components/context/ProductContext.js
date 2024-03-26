@@ -7,8 +7,6 @@ export const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]); // Initialize product data state
 
-  // You can add functions to manage product data here, similar to what you did in TaskContext
-
   return (
     <ProductContext.Provider value={{ products }}>
       {children}

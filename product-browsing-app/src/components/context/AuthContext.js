@@ -11,12 +11,10 @@ export const AuthProvider = ({ children }) => {
 
   // Define any authentication-related functions here
   const signIn = (userData) => {
-    // Implement your sign-in logic here
     setUser(userData);
   };
 
   const signOut = () => {
-    // Implement your sign-out logic here
     setUser(null);
   };
 

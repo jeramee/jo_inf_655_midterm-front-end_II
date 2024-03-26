@@ -24,8 +24,6 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform form submission logic here
-    // For example, you can send the formData to your backend server
-    // Upon successful submission, you can clear the form data and redirect the user
     // For demonstration purposes, let's assume the submission is successful
     alert('Form submitted successfully!');
     setFormData({
